@@ -12,35 +12,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-// Route::get('login',"LoginController@loginForm");
-// Route::get('profile','UserController@profile');
-// Route::post('login',"LoginController@postLogin");
-
-// Route::get('foo', function(){
-//       return "Hello word";
-// })->name('demo');
-
-// Route::get('poly/{classname}/{id?}' , function($name, $id = "1"){
-//     return "class name : $name - $id";
-// });
-// Route::get('poly-hn/{id}' , function($id){
-//     return "<a href='".route('demo')."'>link demo</a> ";
-// })->where("id", '[0-9]+');
-
-
-// Route::group(['prefix' => 'pt14315-web'], function(){
-//     Route::get('/', function(){
-//         return "danh sách sinh viên trong lớp";
-//     });
-//     Route::get('top-10', function(){
-//         return "danh sách top 10";
-//     });
-// });
-
 Route::get('/' , 'ProductController@index');
 Route::get('categories','CategoryController@index')->name('cate.list');
 Route::get('categories/{id}/remove','CategoryController@delete')->name('cate.remove');
@@ -104,7 +75,3 @@ Route::get('dashboard', 'ProductController@dashboard')->name('dashboard');
 Route::get('/shop-detail','ProductController@showProduct')->name('pro.show');
 
 
-// Route::get('index','HomeController@index');
-// Route::get('shop-list','HomeController@shoplist');
-// Route::get('shop-grid','HomeController@shopgrid');
-// Route::get('single-product','HomeController@single');
